@@ -1,8 +1,4 @@
-/* ==========================================================================
-   Retro Cyber OS Stylesheet (Fixed & Validated)
-   ========================================================================== */
-
-/* Fixed: Valid Google Fonts API route for the VT323 typography asset */
+/* Import retro font */
 @import url('https://googleapis.com');
 
 :root {
@@ -279,7 +275,8 @@ body {
     margin-left: 15px; 
     font-size: 1.1rem; 
     color: #555; 
-    overflow: hidden;  White-space: nowrap;
+    overflow: hidden; 
+    white-space: nowrap;
 }
 
 .system-tray {
@@ -308,11 +305,8 @@ body {
         padding: 10px;
         border-radius: 4px;
     }
-    body { 
-        padding: 10px 10px 60px 10px; 
-    }
+    body { padding: 10px 10px 60px 10px; }
 }
-
 /* Retro Certificate Upload Containers */
 .cert-card {
     display: flex;
@@ -335,10 +329,161 @@ body {
     overflow: hidden;
 }
 
-/* Fixed: Restored and completed truncated selector rules */
 .cert-image-frame img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    display: block;
+    border: 2px inset #ffffff; /* Classic crisp border surrounding your image upload */
 }
+/* Layout Optimizations for Large Certificate Groups */
+.spec-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.cert-card h4 {
+    font-size: 1.1rem;
+    margin: 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cert-card p {
+    font-size: 0.95rem;
+    margin: 2px 0 8px 0;
+}
+
+.btn-sm {
+    font-size: 0.9rem !important;
+    padding: 3px 6px !important;
+    margin: 2px 0 0 0 !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cert-image-frame {
+    height: 120px; /* Slimmer height so 13 frames load compactly on screen */
+}
+/* Retro Project Screenshot Frame Configurations */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.project-image-frame {
+    background: #404040; /* Dark gray retro screen background */
+    border-top: 3px solid var(--window-edge-dark);
+    border-left: 3px solid var(--window-edge-dark);
+    border-right: 3px solid var(--window-edge-light);
+    border-bottom: 3px solid var(--window-edge-light);
+    padding: 4px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    overflow: hidden;
+}
+
+.project-image-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border: 1px inset #ffffff; /* Sharp crisp outline separating the image from the window bezel */
+}
+/* Layout Configurations for Project Screenshot Cards */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.project-image-frame {
+    background: #404040; /* Retro monitor screen background */
+    border-top: 3px solid var(--window-edge-dark);
+    border-left: 3px solid var(--window-edge-dark);
+    border-right: 3px solid var(--window-edge-light);
+    border-bottom: 3px solid var(--window-edge-light);
+    padding: 4px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    overflow: hidden;
+}
+
+.project-image-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border: 1px inset #ffffff; /* Crisp white display outline border */
+}
+
+.btn-sm {
+    font-size: 0.9rem !important;
+    padding: 4px 8px !important;
+    margin-top: auto !important; /* Pushes button cleanly to the bottom of the card */
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Retro Profile Avatar Frame Styles */
+.profile-layout-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 25px;
+    align-items: start;
+    margin-top: 15px;
+}
+
+.profile-picture-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+}
+
+.profile-image-frame {
+    background: #404040; /* Retro shadow container backing */
+    border-top: 3px solid var(--window-edge-dark);
+    border-left: 3px solid var(--window-edge-dark);
+    border-right: 3px solid var(--window-edge-light);
+    border-bottom: 3px solid var(--window-edge-light);
+    padding: 6px;
+    box-sizing: border-box;
+    width: 140px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.profile-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px inset #ffffff; /* System edge highlight */
+}
+
+/* Responsive fix for narrow mobile profile layout screen states */
+@media (max-width: 600px) {
+    .profile-layout-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+    .profile-picture-container {
+        margin-bottom: 15px;
+    }
+}
+/* --- PREVENT MOBILE AUTOMATIC ZOOM --- */
+@media (max-width: 768px) {
+    
+    input, select, textarea, button, .start-btn, .btn-retro {
+        font-size: 16px; 
+    }
+}
+
