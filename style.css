@@ -479,3 +479,11 @@ body {
         margin-bottom: 15px;
     }
 }
+/* --- PREVENT MOBILE AUTOMATIC ZOOM --- */
+@media (max-width: 768px) {
+    
+    input, select, textarea, button, .start-btn, .btn-retro {
+        font-size: 16px !important; 
+    }
+}
+
