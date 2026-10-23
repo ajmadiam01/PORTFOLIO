@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT_Student_Portfolio.exe</title>
+    <!-- Linking the external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="desktop-environment">
+
+    <!-- SIDEBAR COLUMN: SHORTCUT ICONS -->
+    <div class="desktop-shortcuts">
+        <a href="#about" class="shortcut-icon" onclick="playBeep()">
+            <div class="icon-graphic">👤</div>
+            <span>Profile.txt</span>
+        </a>
+        <a href="#projects" class="shortcut-icon" onclick="playBeep()">
+            <div class="icon-graphic">🛠️</div>
+            <span>Projects.exe</span>
+        </a>
+        <a href="#credentials" class="shortcut-icon" onclick="playBeep()">
+            <div class="icon-graphic">📜</div>
+            <span>Certificates.sys</span>
+        </a>
+        <a href="#resume-box" class="shortcut-icon" onclick="playBeep()">
+            <div class="icon-graphic">💾</div>
+            <span>Resume.bat</span>
+        </a>
+    </div>
+
+    <!-- MAIN WINDOW CONTAINER -->
+    <div class="window-container">
+
+        <!-- WINDOW 1: PROFILE -->
+                <!-- WINDOW 1: PROFILE SUMMARY (WITH RETRO PROFILE AVATAR BOX) -->
+        <div id="about" class="window">
+            <div class="title-bar">
+                <span>📂 PROFILE_SUMMARY.TXT</span>
+                <div class="title-bar-buttons">
+                    <button onclick="playBeep()">?</button>
+                    <button onclick="toggleWindow('about')">X</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="terminal-box">
+                    > ACCESSING MATRIX DEPLOYMENT... STATUS: SUCCESS<br>
+                    > DEVICE READY // OCT_2026_VERSION_1.0<br>
+                    > SECURITY LOGGED IN AS: IT_STUDENT
+                </div>
+                
+                
+                <div class="profile-layout-grid">
+                    
+                    <!-- Left Side: Retro Picture Box Frame -->
+                    <div class="profile-picture-container">
+                        <div class="profile-image-frame">
+                            <!-- Replace 'profile.jpg' with your actual face photo file name -->
+                            <img src="avatar.png" alt="User Profile Avatar" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://w3.org\' width=\'120\' height=\'140\' viewBox=\'0 0 120 140\'><rect width=\'120\' height=\'140\' fill=\'%23555\'/><circle cx=\'60\' cy=\'50\' r=\'25\' fill=\'%23aaa\'/><path d=\'M20,120 Q60,80 100,120 Z\' fill=\'%23aaa\'/><text x=\'50%\' y=\'92%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'monospace\' font-size=\'8\' fill=\'%23888\'>[ No Photo ]</text></svg>';">
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <div class="profile-details-content">
+                        <h2 style="margin-top: 0; color: var(--title-blue);">Hello, I am [ALDWIN JOHN MADIAM]</h2>
+                        <p>Welcome to my secure technical repository. I am an Information Technology student major focusing on structural system layouts, database mechanics, and user interface deployment strategies.</p>
+                        
+                        <h3 style="border-bottom: 2px solid var(--window-edge-dark); padding-bottom: 4px; margin-top: 20px;">🎓 Academic Credentials</h3>
+                        <p><strong>Bachelor of Science in Information Technology</strong><br>
+                        [NORTHEASTERN COLLEGE] — Expected Timeline: 2027</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- WINDOW 2: PROJECTS & SKILLS -->
+                <!-- UPDATED WINDOW 2: HARDWARE & APPLICATIONS (WITH RETRO SCREENSHOT BOXES) -->
+        <div id="projects" class="window">
+            <div class="title-bar">
+                <span>⚙️ HARDWARE_AND_APPLICATIONS.EXE</span>
+                <div class="title-bar-buttons">
+                    <button onclick="playBeep()">?</button>
+                    <button onclick="toggleWindow('projects')">X</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>⚡ Core Skills & Technical Frameworks</h2>
+                <p style="background: #eef; padding: 10px; border-left: 4px solid var(--title-blue);">
+                    <strong>Languages & Tooling:</strong> HTML5, CSS3, JavaScript, SQL, PHP, Git Ecosystem.
+                </p>
+                
+                <h3 style="margin-top: 25px;">📁 Monitored Academic Subsystems</h3>
+                <div class="grid spec-grid">
+                    
+                    <!-- Card 1: Restaurant Management System -->
+                    <div class="card project-card">
+                        <div class="project-image-frame">
+                            <!-- Replace 'restaurant-ss.jpg' with your actual screenshot filename -->
+                            <img src="food.png" alt="Restaurant Management System Screenshot" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://w3.org\' width=\'100\' height=\'100\' viewBox=\'0 0 100 100\'><rect width=\'100\' height=\'100\' fill=\'%23555\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'monospace\' font-size=\'8\' fill=\'%23aaa\'>[ Image Missing ]</text></svg>';">
+                        </div>
+                        <h3>🍔 Restaurant Management System</h3>
+                        <p>An automated database infrastructure designed to securely retrieve and manage real-time inventory, sales, and operational assets from localized stores.</p>
+                        <a href="food.png" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+                    
+                    <!-- Card 2: Fitness Gym System -->
+                    <div class="card project-card">
+                        <div class="project-image-frame">
+                            <!-- Replace 'gym-ss.jpg' with your actual screenshot filename -->
+                            <img src="gym.jpg" alt="Fitness Gym System Screenshot" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://w3.org\' width=\'100\' height=\'100\' viewBox=\'0 0 100 100\'><rect width=\'100\' height=\'100\' fill=\'%23555\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'monospace\' font-size=\'8\' fill=\'%23aaa\'>[ Image Missing ]</text></svg>';">
+                        </div>
+                        <h3>🏋️‍♂️ Fitness Gym System</h3>
+                        <p>A streamlined application designed to manage everyday gym operations and member activities in real time.</p>
+                        <a href="gym.jpg" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- WINDOW 3: CERTIFICATES -->
+                <!-- WINDOW 3: CERTIFICATES -->
+        <div id="credentials" class="window">
+            <div class="title-bar">
+                <span>💎 PROF_DEV_VERIFICATION.SYS</span>
+                <div class="title-bar-buttons">
+                    <button onclick="playBeep()">?</button>
+                    <button onclick="toggleWindow('credentials')">X</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>📜 Verified Course Milestones & Symposiums</h2>
+                <p>Total System Records: <strong>13 Certificates Displayed</strong>. </p>
+                
+                <div class="grid spec-grid">
+
+                    <!-- Certificate 01 -->
+                    <div class="card cert-card">
+                        <div class="cert-image-frame">
+                            <img src="c.png" alt="Certificate 1">
+                        </div>
+                        <h4>🏅 Foundational C# with Microsoft</h4>
+                        <p><small>Issued by: freeCodeCamp Microsoft</small></p>
+                        <a href="c.png" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+
+                    <!-- Certificate 02 -->
+                    <div class="card cert-card">
+                        <div class="cert-image-frame">
+                            <img src="n1.png" alt="Certificate 2">
+                        </div>
+                        <h4>🏅 Networking Basics</h4>
+                        <p><small>Issued by: Cisco</small></p>
+                        <a href="n1.png" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+
+                    <!-- Certificate 03 -->
+                    <div class="card cert-card">
+                        <div class="cert-image-frame">
+                            <img src="n2.png" alt="Certificate 3">
+                        </div>
+                        <h4>🏅 Networking Devices Initial Config</h4>
+                        <p><small>Issued by: Cisco</small></p>
+                        <a href="n2.png" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+
+                    <!-- Certificate 04 -->
+                    <div class="card cert-card">
+                        <div class="cert-image-frame">
+                            <img src="t1.png" alt="Certificate 4">
+                        </div>
+                        <h4>🏅 Introduction to Computer Systems</h4>
+                        <p><small>Issued by: TESDA</small></p>
+                        <a href="t1.png" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+
+                    <!-- Certificate 05 -->
+                    <div class="card cert-card">
+                        <div class="cert-image-frame">
+                            <img src="t2.png" alt="Certificate 5">
+                        </div>
+                        <h4>🏅 Installing & Configuring</h4>
+                        <p><small>Issued by: TESDA</small></p>
+                        <a href="t2.png" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+
+                    <!-- Certificate 06 -->
+                    <div class="card cert-card">
+                        <div class="cert-image-frame">
+                            <img src="t3.png" alt="Certificate 6">
+                        </div>
+                        <h4>🏅 Setting Up Networks</h4>
+                        <p><small>Issued by: TESDA</small></p>
+                        <a href="t3.png" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+
+                    <!-- Certificate 07 -->
+                    <div class="card cert-card">
+                        <div class="cert-image-frame">
+                            <img src="t4.png" alt="Certificate 7">
+                        </div>
+                        <h4>🏅 Managing Computer Systems</h4>
+                        <p><small>Issued by: TESDA</small></p>
+                        <a href="t4.png" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+
+                    <!-- Certificate 08 -->
+                    <div class="card cert-card">
+                        <div class="cert-image-frame">
+                            <img src="t5.png" alt="Certificate 8">
+                        </div>
+                        <h4>🏅 Setting Up Servers</h4>
+                        <p><small>Issued by: TESDA</small></p>
+                        <a href="t5.png" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+
+                    <!-- Certificate 09 -->
+                    <div class="card cert-card">
+                        <div class="cert-image-frame">
+                            <img src="w1.jpg" alt="Certificate 9">
+                        </div>
+                        <h4>🏅 Agentic AI</h4>
+                        <p><small>Issued by: NORTHEASTERN COLLEGE</small></p>
+                        <a href="w1.jpg" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+
+                    <!-- Certificate 10 -->
+                    <div class="card cert-card">
+                        <div class="cert-image-frame">
+                            <img src="w2.jpg" alt="Certificate 10">
+                        </div>
+                        <h4>🏅 Programming Fundamentals</h4>
+                        <p><small>Issued by: NORTHEASTERN COLLEGE</small></p>
+                        <a href="w2.jpg" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+
+                    <!-- Certificate 11 -->
+                    <div class="card cert-card">
+                        <div class="cert-image-frame">
+                            <img src="w3.jpg" alt="Certificate 11">
+                        </div>
+                        <h4>🏅 Integrating IoT in Capstone Project</h4>
+                        <p><small>Issued by: NORTHEASTERN COLLEGE</small></p>
+                        <a href="w3.jpg" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+
+                    <!-- Certificate 12 -->
+                    <div class="card cert-card">
+                        <div class="cert-image-frame">
+                            <img src="w4.jpg" alt="Certificate 12">
+                        </div>
+                        <h4>🏅 Video Editing Tips and Tricks</h4>
+                        <p><small>Issued by: NORTHEASTERN COLLEGE</small></p>
+                        <a href="w4.jpg" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+
+                    <!-- Certificate 13 -->
+                    <div class="card cert-card">
+                        <div class="cert-image-frame">
+                            <img src="e.jpg" alt="Certificate 13">
+                        </div>
+                        <h4>🏅 Code to Web: Turning Ideas to Digital Experiences</h4>
+                        <p><small>Issued by: EPCPS</small></p>
+                        <a href="e.jpg" target="_blank" class="btn-retro btn-sm" onclick="playBeep()">View Full Image</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- WINDOW 4: DOWNLOAD RESUME & SOCIALS -->
+        <div id="resume-box" class="window">
+            <div class="title-bar">
+                <span>💾 USER_DOWNLOAD_CENTER.BAT</span>
+                <div class="title-bar-buttons">
+                    <button onclick="playBeep()">?</button>
+                    <button onclick="toggleWindow('resume-box')">X</button>
+                </div>
+            </div>
+            <div class="window-content" style="text-align: center;">
+                <h2>📄 Download Document Portal</h2>
+                
+                
+                <a href="resume.pdf" download class="btn-retro" style="font-size: 1.6rem; padding: 12px 24px;" onclick="playBeep()">
+                    💾 DOWNLOAD RESUME (PDF)
+                </a>
+                
+                <p style="margin-top: 20px;">Contact Interface: <strong>aldwinmadiam01@gmail.com</strong></p>
+                
+                <h3>🌐 External Hub Terminals</h3>
+               
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- BOTTOM TASKBAR -->
+<div class="taskbar">
+    <button class="start-btn" onclick="playBeep()">
+        <span style="font-size:1.4rem;">🏁</span> Start
+    </button>
+    
+    <div class="taskbar-status">
+        Running: IT_Student_Portfolio_v2.0.exe
+    </div>
+
+    <div class="system-tray">
+        <span>🔊</span>
+        <span id="retro-clock">00:00 AM</span>
+    </div>
+</div>
+
+<!-- JAVASCRIPT MECHANICS -->
+<script>
+    function updateRetroClock() {
+        const now = new Date();
+        let hours = now.getHours();
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        const formattedHours = String(hours).padStart(2, '0');
+        
+        document.getElementById('retro-clock').textContent = `${formattedHours}:${minutes} ${ampm}`;
+    }
+    setInterval(updateRetroClock, 1000);
+    updateRetroClock();
+
+    function playBeep() {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+        
+        oscillator.type = 'square';
+        oscillator.frequency.value = 600;
+        gainNode.gain.value = 0.05;
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        
+        oscillator.start();
+        setTimeout(() => oscillator.stop(), 80);
+    }
+
+    function toggleWindow(elementId) {
+        playBeep();
+        const targetWindow = document.getElementById(elementId);
+        if (targetWindow.style.display === "none") {
+            targetWindow.style.display = "block";
+        } else {
+            targetWindow.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
