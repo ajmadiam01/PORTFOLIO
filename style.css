@@ -400,3 +400,80 @@ body {
     border: 2px inset #ffffff;
 }
 
+/* ==========================================================================
+UPDATED & FIXED: Comprehensive Mobile Media Queries (iOS & Android Friendly)
+========================================================================== /
+@media (max-width: 768px) {
+/ Scale font down beautifully so text doesn't look giant on small screens */
+body {
+padding: 10px 10px 60px 10px;
+font-size: 1.05rem;
+}
+/* Transform split sidebar grid to single-column stack */
+.desktop-environment {
+grid-template-columns: 1fr;
+gap: 15px;
+}
+/* Arrange short-cuts in an organized horizontal grid on top */
+.desktop-shortcuts {
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+background: rgba(0,0,0,0.15);
+padding: 12px 6px;
+border-radius: 4px;
+border: 2px inset var(--window-edge-dark);
+gap: 10px;
+}
+.shortcut-icon {
+font-size: 0.95rem;
+}
+.icon-graphic {
+font-size: 1.7rem;
+padding: 6px;
+}
+/* Prevent window content paddings from cramping container space */
+.window-content {
+padding: 12px;
+margin: 2px;
+}
+.title-bar {
+font-size: 1.15rem;
+padding: 4px 8px;
+}
+.terminal-box {
+font-size: 1.1rem;
+padding: 10px;
+}
+/* Enforce safe cards sizing parameters inside grids */
+.grid, .spec-grid {
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 15px;
+}
+/* Hide redundant status bar info to prevent structural text overlap */
+.taskbar-status {
+display: none;
+}
+.social-links {
+display: flex;
+flex-direction: column;
+gap: 10px;
+align-items: center;
+}
+
+/* Specific narrow optimization for phones below 600px width */
+@media (max-width: 600px) {
+.profile-layout-grid {
+grid-template-columns: 1fr;
+justify-items: center;
+text-align: center;
+gap: 15px;
+}
+.profile-picture-container {
+margin-bottom: 5px;
+}
+.grid, .spec-grid {
+grid-template-columns: 1fr; /* Turns into a neat vertical list on very thin screens */
+}
+}
+
