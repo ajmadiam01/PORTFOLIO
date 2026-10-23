@@ -479,11 +479,4 @@ body {
         margin-bottom: 15px;
     }
 }
-/* --- PREVENT MOBILE AUTOMATIC ZOOM --- */
-@media (max-width: 768px) {
-    /* Forces all interactive inputs, buttons, and text fields to a minimum size so iOS/Android won't force a zoom */
-    input, select, textarea, button, .start-btn, .btn-retro {
-        font-size: 16px !important; 
-    }
-}
 
