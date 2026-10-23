@@ -1,23 +1,21 @@
 /* ==========================================================================
-   Retro Cyber OS Stylesheet (Fully Updated & Mobile-Optimized)
+   Retro Cyber OS Stylesheet (Fixed Certificate Frame Size & Aspect Ratio)
    ========================================================================== */
 
-/* 1. Google Fonts API route for VT323 typography */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
-    --bg-color: #008080; /* Windows 95 Teal */
-    --window-bg: #c0c0c0; /* Retro Grey */
+    --bg-color: #008080; 
+    --window-bg: #c0c0c0; 
     --window-edge-light: #ffffff;
     --window-edge-dark: #808080;
     --title-blue: #000080;
     --title-blue-light: #1084d0;
     --text-color: #000000;
     --terminal-bg: #111111;
-    --terminal-text: #39ff14; /* Cyber Neon Green */
+    --terminal-text: #39ff14; 
 }
 
-/* Base Body & Layout Grid Setup */
 body {
     background-color: var(--bg-color);
     background-image: 
@@ -25,7 +23,7 @@ body {
         linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
     background-size: 20px 20px;
     font-family: 'VT323', monospace, sans-serif;
-    font-size: 1.3rem; /* Base desktop font size */
+    font-size: 1.3rem; 
     color: var(--text-color);
     margin: 0;
     padding: 20px 20px 60px 20px;
@@ -34,12 +32,10 @@ body {
     box-sizing: border-box;
 }
 
-/* Ensure all elements calculate layout dimensions accurately */
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
-/* Custom Operating System Scrollbars */
 ::-webkit-scrollbar {
     width: 16px;
     background: #dfdfdf;
@@ -53,7 +49,6 @@ body {
     border-bottom: 2px solid var(--window-edge-dark);
 }
 
-/* Environment Blueprint */
 .desktop-environment {
     width: 100%;
     max-width: 950px;
@@ -62,7 +57,6 @@ body {
     gap: 20px;
 }
 
-/* Desktop Sidebar Links */
 .desktop-shortcuts {
     display: flex;
     flex-direction: column;
@@ -95,7 +89,6 @@ body {
     border: 1px dashed rgba(255,255,255,0.3);
 }
 
-/* Window Frames & UI Elements */
 .window-container {
     display: flex;
     flex-direction: column;
@@ -154,7 +147,6 @@ body {
     overflow-x: hidden;
 }
 
-/* CRT Neon Green Terminals */
 .terminal-box {
     background-color: var(--terminal-bg);
     color: var(--terminal-text);
@@ -179,7 +171,6 @@ body {
     pointer-events: none;
 }
 
-/* Dynamic Grid Layouts */
 .grid, .spec-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -203,7 +194,6 @@ body {
     color: var(--title-blue);
 }
 
-/* 3D Action Buttons */
 .btn-retro {
     display: inline-block;
     background: var(--window-bg);
@@ -257,7 +247,6 @@ body {
     color: var(--title-blue-light);
 }
 
-/* Bottom Desktop Taskbar Layout */
 .taskbar {
     position: fixed;
     bottom: 0;
@@ -318,9 +307,8 @@ body {
     gap: 8px;
 }
 
-/* Image Bezel & Bezel Frames Configurations */
 .cert-image-frame, .project-image-frame {
-    background: #404040;
+    background: #404040; 
     border-top: 3px solid var(--window-edge-dark);
     border-left: 3px solid var(--window-edge-dark);
     border-right: 3px solid var(--window-edge-light);
@@ -330,18 +318,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    height: auto !important; 
+    width: 100%;
+    aspect-ratio: 16 / 9; 
     overflow: hidden;
 }
 
 .cert-image-frame img, .project-image-frame img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; 
     border: 1px inset #ffffff;
 }
 
-/* Profile Section Structure (Desktop defaults) */
 .profile-layout-grid {
     display: grid;
     grid-template-columns: 140px 1fr;
@@ -379,23 +368,17 @@ body {
     border: 2px inset #ffffff;
 }
 
-
-/* ==========================================================================
-   GLOBAL RESPONSIVE MEDIA QUERIES (Mobile Views Optimizer)
-   ========================================================================== */
 @media (max-width: 768px) {
     body { 
         padding: 10px 10px 60px 10px; 
-        font-size: 1.05rem; /* Font fluid adjustment  */
+        font-size: 1.05rem; 
     }
 
-    /* Transform main environment split to single block stack */
     .desktop-environment {
         grid-template-columns: 1fr;
         gap: 15px;
     }
 
-    /* Shortcut links dock layout transformation */
     .desktop-shortcuts {
         flex-direction: row;
         flex-wrap: wrap;
@@ -410,7 +393,6 @@ body {
     .shortcut-icon { font-size: 0.95rem; }
     .icon-graphic { font-size: 1.7rem; padding: 6px; }
 
-    /* Compact padding settings inside core display windows */
     .window-content {
         padding: 12px;
         margin: 2px;
@@ -419,23 +401,17 @@ body {
     .title-bar { font-size: 1.15rem; padding: 4px 8px; }
     .terminal-box { font-size: 1.1rem; padding: 10px; }
 
-    /* Enforce rigid container scaling controls across all content grid panels */
     .grid, .spec-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 15px;
     }
-
-    /* ---------------------------------------------------------
-       CRITICAL RESPONSIVE REVERSIONS: PROFILE & CERTIFICATES 
-       --------------------------------------------------------- */
     
-   
     .profile-layout-grid {
         display: grid !important;
         grid-template-columns: 100px 1fr !important; 
         gap: 15px !important;
         align-items: start !important;
-        text-align: left !important;
+        text-align: left !important; 
     }
 
     .profile-picture-container {
@@ -456,22 +432,22 @@ body {
         margin-top: 0 !important;
     }
 
-   
     .cert-card {
         padding: 10px !important;
         gap: 8px !important;
     }
 
     .cert-image-frame {
-        height: 110px !important;
+        height: auto !important; 
         margin-bottom: 8px !important;
         padding: 4px !important;
+        aspect-ratio: 16 / 9; 
     }
 
     .cert-image-frame img {
-        max-width: 100% !important;
-        max-height: 100% !important;
-        object-fit: contain !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
     }
 
     .cert-card h4 {
@@ -484,7 +460,6 @@ body {
         margin: 2px 0 6px 0 !important;
     }
 
-    /* Taskbar module utilities adjustments */
     .taskbar-status { display: none; } 
     .social-links {
         display: flex;
