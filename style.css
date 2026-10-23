@@ -386,7 +386,7 @@ body {
 @media (max-width: 768px) {
     body { 
         padding: 10px 10px 60px 10px; 
-        font-size: 1.05rem; /* Font fluid adjustment upang hindi maging dambuhala */
+        font-size: 1.05rem; /* Font fluid adjustment  */
     }
 
     /* Transform main environment split to single block stack */
@@ -429,13 +429,13 @@ body {
        CRITICAL RESPONSIVE REVERSIONS: PROFILE & CERTIFICATES 
        --------------------------------------------------------- */
     
-    /* 1. Ibinabalik ang orihinal na 2-column layout para sa profile (Magkatabi ang larawan at text) */
+   
     .profile-layout-grid {
         display: grid !important;
-        grid-template-columns: 100px 1fr !important; /* Ginawang 100px para sakto lang sa mobile screen */
+        grid-template-columns: 100px 1fr !important; 
         gap: 15px !important;
         align-items: start !important;
-        text-align: left !important; /* Left-aligned para malinis ang profile summary text */
+        text-align: left !important;
     }
 
     .profile-picture-container {
@@ -444,7 +444,7 @@ body {
 
     .profile-image-frame {
         width: 100px !important;
-        height: 115px !important; /* Katamtamang taas para sa profile image */
+        height: 115px !important; 
         padding: 4px !important;
     }
 
@@ -456,14 +456,14 @@ body {
         margin-top: 0 !important;
     }
 
-    /* 2. Certificate Overrides - Ginawang compact, hindi mahaba at hindi dambuhala */
+   
     .cert-card {
         padding: 10px !important;
         gap: 8px !important;
     }
 
     .cert-image-frame {
-        height: 110px !important; /* Nilimitahan ang vertical space para "katam-kataman lang" */
+        height: 110px !important;
         margin-bottom: 8px !important;
         padding: 4px !important;
     }
@@ -476,7 +476,7 @@ body {
 
     .cert-card h4 {
         font-size: 1.05rem !important;
-        white-space: normal !important; /* Pinapayagang mag-wrap ang text para magkasya */
+        white-space: normal !important; 
     }
 
     .cert-card p {
@@ -485,7 +485,7 @@ body {
     }
 
     /* Taskbar module utilities adjustments */
-    .taskbar-status { display: none; } /* Tinanggal ang mahabang text status sa ilalim ng mobile viewport */
+    .taskbar-status { display: none; } 
     .social-links {
         display: flex;
         flex-direction: column;
